@@ -1,3 +1,5 @@
 module.exports = {
-   ...require('./causal/causalCtr')
+   ...require('./listas/MantenimientoCtr'),
+   ...require('./listas/IdentificacionCtr'),
+   ...require('./listas/TipoCompraCtr')
 }

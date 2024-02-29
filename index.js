@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 // v1 Routes
 
-//app.use('/v1',router)
+app.use('/v1',router)
 
 app.listen(process.env.PORT || 6000, () => {
     console.log('El services Actived to port ' + process.env.PORT)

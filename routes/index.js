@@ -1,9 +1,11 @@
 const router = require('express').Router()
 const { 
-        getCausales
-    } = require('../controllers')
+  getLsMantenimiento, getLsTipoIdentificacionCtr, getLsTipoCompraCtr
+} = require('../controllers')
 
 
-//gets
-router.get('/getCausales',getCausales )
+// gets Listas
+router.get('/getlsMantenimiento',getLsMantenimiento )
+router.get('/getlsTipoIdentificacion',getLsTipoIdentificacionCtr ),
+router.get('/getlsTipoCompra',getLsTipoCompraCtr )
 module.exports = router
