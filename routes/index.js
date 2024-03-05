@@ -1,6 +1,9 @@
 const router = require('express').Router()
 const { 
-  getLsMantenimiento, getLsTipoIdentificacionCtr, getLsTipoCompraCtr
+  getLsMantenimiento, 
+  getLsTipoIdentificacionCtr, 
+  getLsTipoCompraCtr,
+  getLsTipoActivoCtr
 } = require('../controllers')
 
 
@@ -8,4 +11,6 @@ const {
 router.get('/getlsMantenimiento',getLsMantenimiento )
 router.get('/getlsTipoIdentificacion',getLsTipoIdentificacionCtr ),
 router.get('/getlsTipoCompra',getLsTipoCompraCtr )
+router.get('/getlsTipoActivo',getLsTipoActivoCtr )
+router.get('/getlsPisos',getLsPisosCtr )
 module.exports = router

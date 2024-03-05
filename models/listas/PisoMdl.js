@@ -1,8 +1,8 @@
-const { df_lsTipoActivo } = require ('../define/TipoActivo')
+const { df_lsPisos } = require ('../define')
 
 const getPisosMdl = async () => {
    try {
-       const results = await df_lsTipoActivo.findAll()
+       const results = await df_lsPisos.findAll()
        return results
    }catch (error) {
         throw new Error (error.message)

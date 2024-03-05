@@ -1,7 +1,7 @@
-const { getLsTipoCompraMdl } = require('../../models')
-const getLsTipoActivoCtr = async (req, res) => {
+const { getPisosMdl } = require('../../models')
+const getLsPisosCtr = async (req, res) => {
    try {
-        const results = await getLsTipoCompraMdl() 
+        const results = await getPisosMdl() 
         res.send(results)
    }catch (error) {
         res.status(500).send({
@@ -12,5 +12,5 @@ const getLsTipoActivoCtr = async (req, res) => {
 }
 
 module.exports = {
-    getLsTipoActivoCtr
+    getLsPisosCtr
 }
