@@ -3,5 +3,6 @@ module.exports = {
     ...require('./TipoCompra'),
     ...require('./TipoActivo'),
     ...require('./TipoIdentificacion'),
-    ...require('./Pisos') 
+    ...require('./Pisos'),
+    ...require('./Modelos') 
 }

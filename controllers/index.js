@@ -3,5 +3,6 @@ module.exports = {
    ...require('./listas/IdentificacionCtr'),
    ...require('./listas/TipoCompraCtr'),
    ...require('./listas/TipoActivoCtr'),
-   ...require('./listas/PisosCtr')
+   ...require('./listas/PisosCtr'),
+   ...require('./listas/ModelosCtr')
 }
