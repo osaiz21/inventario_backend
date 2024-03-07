@@ -3,7 +3,8 @@ const {
   getLsMantenimiento, 
   getLsTipoIdentificacionCtr, 
   getLsTipoCompraCtr,
-  getLsTipoActivoCtr
+  getLsTipoActivoCtr,
+  getLsPisosCtr
 } = require('../controllers')
 
 
