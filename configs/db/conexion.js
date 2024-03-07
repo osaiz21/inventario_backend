@@ -11,6 +11,8 @@ const conectar = async () => {
     }
 }
 
+
+
 module.exports = {
     Sequelize,
     sequelize,

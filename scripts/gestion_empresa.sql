@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 8.3.0, for Linux (aarch64)
+-- MySQL dump 10.13  Distrib 8.3.0, for Linux (aarch64) 
 --
 -- Host: localhost    Database: gestion_empresa
 -- ------------------------------------------------------
