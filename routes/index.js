@@ -5,7 +5,8 @@ const {
   getLsTipoCompraCtr,
   getLsTipoActivoCtr,
   getLsPisosCtr,
-  getLsModelosCtr
+  getLsModelosCtr,
+  getLsPaisCtr
 } = require('../controllers')
 
 
@@ -16,4 +17,5 @@ router.get('/getlsTipoCompra',getLsTipoCompraCtr )
 router.get('/getlsTipoActivo',getLsTipoActivoCtr )
 router.get('/getlsPisos',getLsPisosCtr )
 router.get('/getlsModelos',getLsModelosCtr )
+router.get('/getlsPais',getLsPaisCtr )
 module.exports = router

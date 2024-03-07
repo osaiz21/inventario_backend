@@ -4,5 +4,6 @@ module.exports = {
     ...require('./TipoActivo'),
     ...require('./TipoIdentificacion'),
     ...require('./Pisos'),
-    ...require('./Modelos') 
+    ...require('./Modelos'),
+    ...require('./Pais') 
 }
