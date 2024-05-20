@@ -5,5 +5,6 @@ module.exports = {
     ...require('./listas/TipoActivoMdl'),
     ...require('./listas/PisoMdl'),
     ...require('./listas/ModelosMdl'),
-    ...require('./listas/PaisMdl')
+    ...require('./listas/PaisMdl'),
+    ...require('./listas/TipoEstado')
 }
