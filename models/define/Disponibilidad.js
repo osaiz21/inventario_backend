@@ -1,13 +1,13 @@
 const { sequelize , Sequelize } = require('../../configs/db/conexion')
 // Modelo del tabla Productos.
-const df_lsTipoMarcas = sequelize.define('lista_marcas', {
-    marcas: {
+const df_lsdisponibilidad = sequelize.define('lista_disponibilidad', {
+    disponibilidad: {
         type: Sequelize.TEXT,
-        field:'marcas'
+        field:'disponibilidad'
     }
   }
 );
 
 module.exports = { 
-    df_lsTipoMarcas
+    df_lsdisponibilidad
 }

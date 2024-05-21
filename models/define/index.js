@@ -7,5 +7,10 @@ module.exports = {
     ...require('./Modelos'),
     ...require('./Pais'),
     ...require('./TipoEstado'),
-    ...require('./TipoMarca'),
+    ...require('./Marca'),
+    ...require('./Activo'),
+    ...require('./Ciudad'),
+    ...require('./Colores'),
+    ...require('./Disponibilidad'),
+    ...require('./Materiales'),
 }

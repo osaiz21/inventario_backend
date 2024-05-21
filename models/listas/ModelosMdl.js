@@ -1,6 +1,6 @@
 const { df_lsModelos } = require("../define")
 
-const getLsMantenimientoMdl = async () => {
+const getLsModelosMdl = async () => {
    try {
        const results = await df_lsModelos.findAll()
        return results
@@ -10,5 +10,5 @@ const getLsMantenimientoMdl = async () => {
 }
 
 module.exports = {
-    getLsMantenimientoMdl
+    getLsModelosMdl
 }

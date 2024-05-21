@@ -7,7 +7,13 @@ const {
   getLsPisosCtr,
   getLsModelosCtr,
   getLsPaisCtr,
-  getLsEstadoCtr
+  getLsEstadoCtr,
+  getLsActivoCtr,
+  getLsCiudadCtr,
+  getLsColoresCtr,
+  getLsDisponibilidadCtr,
+  getLsMarcasCtr,
+  getLsMaterialesCtr
 } = require('../controllers')
 
 
@@ -20,4 +26,10 @@ router.get('/getlsPisos',getLsPisosCtr )
 router.get('/getlsModelos',getLsModelosCtr )
 router.get('/getlsPais',getLsPaisCtr )
 router.get('/getlsEstado',getLsEstadoCtr)
+router.get('/getlsActivo',getLsActivoCtr)
+router.get('/getlsCiudad',getLsCiudadCtr)
+router.get('/getlsColores',getLsColoresCtr)
+router.get('/getlsDisponibilidad',getLsDisponibilidadCtr)
+router.get('/getlsMarcas',getLsMarcasCtr)
+router.get('/getlsMateriales',getLsMaterialesCtr)
 module.exports = router

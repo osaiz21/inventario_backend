@@ -1,11 +1,10 @@
-const { getLsModelosMdl } = require("../../models")
+const { getCiudadMdl } = require("../../models")
 
-
-const getLsModelosCtr = async (req, res) => {
+const getLsCiudadCtr = async (req, res) => {
    try {
-        const results = await  getLsModelosMdl()
+        const results = await getCiudadMdl()
         res.send(results)
-   }catch (error) {
+    } catch (error) {
         res.status(500).send({
             "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
         })
@@ -14,5 +13,5 @@ const getLsModelosCtr = async (req, res) => {
 }
 
 module.exports = {
-    getLsModelosCtr
+    getLsCiudadCtr
 }
