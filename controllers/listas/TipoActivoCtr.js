@@ -1,7 +1,7 @@
-const { getLsTipoCompraMdl } = require('../../models')
+const {  getTipoActivoMdl } = require('../../models')
 const getLsTipoActivoCtr = async (req, res) => {
    try {
-        const results = await getLsTipoCompraMdl() 
+        const results = await getTipoActivoMdl()
         res.send(results)
    }catch (error) {
         res.status(500).send({

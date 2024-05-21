@@ -1,6 +1,6 @@
 const { sequelize , Sequelize } = require('../../configs/db/conexion')
 // Modelo del tabla Productos.
-const df_lsManteniento = sequelize.define('lista_tipo_mantenimiento', {
+const df_lsTipoManteniento = sequelize.define('lista_tipo_mantenimiento', {
     id_tipo_mantenimiento: {
         type: Sequelize.INTEGER,
         field:'id'
@@ -13,5 +13,5 @@ const df_lsManteniento = sequelize.define('lista_tipo_mantenimiento', {
 );
 
 module.exports = { 
-    df_lsManteniento
+    df_lsTipoManteniento
 }

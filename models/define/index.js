@@ -1,5 +1,5 @@
 module.exports = {
-    ...require('./Mantenimiento'),
+    ...require('./TipoMantenimiento'),
     ...require('./TipoCompra'),
     ...require('./TipoActivo'),
     ...require('./TipoIdentificacion'),
@@ -13,4 +13,5 @@ module.exports = {
     ...require('./Colores'),
     ...require('./Disponibilidad'),
     ...require('./Materiales'),
+    ...require('./UbicacionInventario'),
 }

@@ -1,6 +1,5 @@
 const router = require('express').Router()
 const { 
-  getLsMantenimiento, 
   getLsTipoIdentificacionCtr, 
   getLsTipoCompraCtr,
   getLsTipoActivoCtr,
@@ -13,12 +12,15 @@ const {
   getLsColoresCtr,
   getLsDisponibilidadCtr,
   getLsMarcasCtr,
-  getLsMaterialesCtr
+  getLsMaterialesCtr,
+  getLsTipoMantenimientoCtr,
+  getUbicacionInventarioCtr,
+  createUbicacionInventarioCtr
 } = require('../controllers')
 
 
 // gets Listas
-router.get('/getlsMantenimiento',getLsMantenimiento )
+router.get('/getlsTipoMantenimiento',getLsTipoMantenimientoCtr )
 router.get('/getlsTipoIdentificacion',getLsTipoIdentificacionCtr )
 router.get('/getlsTipoCompra',getLsTipoCompraCtr )
 router.get('/getlsTipoActivo',getLsTipoActivoCtr )
@@ -32,4 +34,10 @@ router.get('/getlsColores',getLsColoresCtr)
 router.get('/getlsDisponibilidad',getLsDisponibilidadCtr)
 router.get('/getlsMarcas',getLsMarcasCtr)
 router.get('/getlsMateriales',getLsMaterialesCtr)
+router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
+
+// post
+
+router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
+
 module.exports = router

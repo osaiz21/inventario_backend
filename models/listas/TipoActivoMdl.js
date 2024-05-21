@@ -1,6 +1,7 @@
-const { df_lsTipoActivo } = require ('../define/TipoActivo')
+const { df_lsTipoActivo } = require("../define")
 
-const getPisosMdl = async () => {
+
+const getTipoActivoMdl = async () => {
    try {
        const results = await df_lsTipoActivo.findAll()
        return results
@@ -10,5 +11,5 @@ const getPisosMdl = async () => {
 }
 
 module.exports = {
-    getPisosMdl
+    getTipoActivoMdl
 }

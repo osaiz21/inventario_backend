@@ -1,6 +1,6 @@
 module.exports = {
-   ...require('./listas/MantenimientoCtr'),
-   ...require('./listas/IdentificacionCtr'),
+   ...require('./listas/TipoMantenimientoCtr'),
+   ...require('./listas/TipoIdentificacionCtr'),
    ...require('./listas/TipoCompraCtr'),
    ...require('./listas/TipoActivoCtr'),
    ...require('./listas/PisosCtr'),
@@ -13,4 +13,5 @@ module.exports = {
    ...require('./listas/DisponibilidadCtr'),
    ...require('./listas/MarcasCtr'),
    ...require('./listas/MaterialesCtr'),
+   ...require('./Inventario/UbicacionInventarioCtrl')
 }
