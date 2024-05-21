@@ -15,7 +15,8 @@ const {
   getLsMaterialesCtr,
   getLsTipoMantenimientoCtr,
   getUbicacionInventarioCtr,
-  createUbicacionInventarioCtr
+  createUbicacionInventarioCtr,
+  createEmpleadosEmpresaCtr
 } = require('../controllers')
 
 
@@ -39,5 +40,6 @@ router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
 // post
 
 router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
+router.post('/createEmpleadoEmpresa', createEmpleadosEmpresaCtr )
 
 module.exports = router

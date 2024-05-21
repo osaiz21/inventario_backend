@@ -14,5 +14,6 @@ module.exports = {
     ...require('./listas/MarcaMdl'),
     ...require('./listas/MaterialesMdl'),
     ...require('./listas/ModelosMdl'),
-    ...require('./Inventario/UbicacionInventarioMdl')
+    ...require('./Inventario/UbicacionInventarioMdl'),
+    ...require('./Empleados/EmpleadosEmpresaMdl')
 }
