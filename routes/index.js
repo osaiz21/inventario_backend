@@ -16,10 +16,12 @@ const {
   getLsTipoMantenimientoCtr,
   getUbicacionInventarioCtr,
   createUbicacionInventarioCtr,
-  createEmpleadosEmpresaCtr
+  createEmpleadosEmpresaCtr,
+  createInventarioCtr,
+  UpdateInventarioCtr
 } = require('../controllers')
 
-
+// inventarme redireccione a las db
 // gets Listas
 router.get('/getlsTipoMantenimiento',getLsTipoMantenimientoCtr )
 router.get('/getlsTipoIdentificacion',getLsTipoIdentificacionCtr )
@@ -37,9 +39,11 @@ router.get('/getlsMarcas',getLsMarcasCtr)
 router.get('/getlsMateriales',getLsMaterialesCtr)
 router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
 
-// post
+// Post
 
 router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
 router.post('/createEmpleadoEmpresa', createEmpleadosEmpresaCtr )
+router.post('/createInventario', createInventarioCtr )
+router.post('/updInventario/:id', UpdateInventarioCtr )
 
 module.exports = router

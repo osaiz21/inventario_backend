@@ -14,5 +14,6 @@ module.exports = {
     ...require('./Disponibilidad'),
     ...require('./Materiales'),
     ...require('./UbicacionInventario'),
-    ...require('./EmpleadosEmpresa')
+    ...require('./EmpleadosEmpresa'),
+    ...require('./Inventario')
 }
