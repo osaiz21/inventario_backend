@@ -2,7 +2,11 @@ const {  getUbicacionInventarioMdl, createUbicacionInventarioMdl } = require("..
 
 const getUbicacionInventarioCtr = async (req, res) => {
     try {
-        const result = await getUbicacionInventarioMdl()
+        const result = await getUbicacionInventarioMdl({ 
+            where: {
+                ...req.query
+            }
+        })
         res.send(result)
     } catch (error) {
         res.status(500).send({
