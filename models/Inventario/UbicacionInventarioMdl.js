@@ -15,7 +15,7 @@ const createUbicacionInventarioMdl = async ({body}) => {
         const results = await df_UbicacionInventario.create({
             ...body
         })
-       return body
+       return results
     } catch (error) {
         throw new Error (error.message)
     }

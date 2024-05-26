@@ -18,7 +18,7 @@ const getUbicacionInventarioCtr = async (req, res) => {
 const createUbicacionInventarioCtr = async (req, res) => {
     try {
         const result = await createUbicacionInventarioMdl(req)
-        res.send(result)
+        res.send([result])
     } catch (error) {
         res.status(500).send({
             "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
