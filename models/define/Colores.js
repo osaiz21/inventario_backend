@@ -1,7 +1,7 @@
 const { sequelize , Sequelize } = require('../../configs/db/conexion')
 // Modelo del tabla Productos.
 const df_lsColores = sequelize.define('lista_colores', {
-    color: {
+    text: {
         type: Sequelize.TEXT,
         field:'color'
     }

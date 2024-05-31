@@ -21,29 +21,29 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'placa_antigua'
     },
-    nombre_activo: {
-        type: Sequelize.TEXT,
-        field:'nombre_activo'
-    },
-    material: {
-        type: Sequelize.TEXT,
-        field:'material'
-    },
-    color: {
+    id_activos: {
         type: Sequelize.INTEGER,
-        field:'color'
+        field:'id_activos'
+    },
+    id_material: {
+        type: Sequelize.INTEGER,
+        field:'id_material'
+    },
+    id_color: {
+        type: Sequelize.INTEGER,
+        field:'id_color'
     },
     especificacion: {
         type: Sequelize.TEXT,
         field: 'especificacion'
     },
-    marca: {
+    id_marca: {
         type: Sequelize.INTEGER,
-        field: 'marca'
+        field: 'id_marca'
     },
-    modelo: {
+    id_modelo: {
         type: Sequelize.INTEGER,
-        field:'modelo'
+        field:'id_modelo'
     },
     serie: {
         type: Sequelize.TEXT,
@@ -57,13 +57,13 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'placapadre'
     },
-    estado: {
+    id_estado: {
         type: Sequelize.INTEGER,
-        field:'estado'
+        field:'id_estado'
     },
-    disponibilidad: {
+    id_disponibilidad: {
         type: Sequelize.INTEGER,
-        field:'disponibilidad'
+        field:'id_disponibilidad'
     },
     comentario: {
         type: Sequelize.TEXT,

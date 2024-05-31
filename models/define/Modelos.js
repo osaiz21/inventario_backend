@@ -5,7 +5,7 @@ const df_lsModelos = sequelize.define('lista_modelo', {
         type: Sequelize.TEXT,
         field:'activo'
     },
-    modelo: {
+    text: {
         type: Sequelize.TEXT,
         field:'modelo'
     },
