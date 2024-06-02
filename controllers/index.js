@@ -15,5 +15,6 @@ module.exports = {
    ...require('./listas/MaterialesCtr'),
    ...require('./Inventario/UbicacionInventarioCtrl'),
    ...require('./Inventario/InventarioCtr'),
-   ...require('./Empleados/EmpleadosEmpresaCtr')
+   ...require('./Empleados/EmpleadosEmpresaCtr'),
+   ...require('./Files/FilesCtr')
 }

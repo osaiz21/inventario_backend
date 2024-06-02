@@ -8,8 +8,8 @@ services:
     container_name: general_empresa
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: NIZ|2UF#![=z3vd&4:%i
-      MYSQL_PASSWORD:  NIZ|2UF#![=z3vd&4:%i
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: root
       MYSQL_ROOT_HOST: '%'
     ports:
       - 3306:3306

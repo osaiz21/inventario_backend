@@ -4,7 +4,8 @@ const cors = require('cors')
 require('dotenv').config()
 const app = express()
 const router = require('./routes')
-
+// route images.
+app.use('/uploads',express.static('uploads'))
 // middleware.
 app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json

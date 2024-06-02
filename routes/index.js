@@ -18,7 +18,8 @@ const {
   createUbicacionInventarioCtr,
   createEmpleadosEmpresaCtr,
   createInventarioCtr,
-  UpdateInventarioCtr
+  UpdateInventarioCtr,
+  uploadFileCtr
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -45,5 +46,8 @@ router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
 router.post('/createEmpleadoEmpresa', createEmpleadosEmpresaCtr )
 router.post('/createInventario', createInventarioCtr )
 router.post('/updInventario/:id', UpdateInventarioCtr )
+
+// Files
+router.post('/uploadFiles',uploadFileCtr)
 
 module.exports = router
