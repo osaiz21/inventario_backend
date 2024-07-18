@@ -16,5 +16,7 @@ module.exports = {
    ...require('./Inventario/UbicacionInventarioCtrl'),
    ...require('./Inventario/InventarioCtr'),
    ...require('./Empleados/EmpleadosEmpresaCtr'),
-   ...require('./Files/FilesCtr')
+   ...require('./Files/FilesCtr'),
+   ...require('./Auditor/AuditorCtr'),
+   ...require('./Jwt/JwtConfig')
 }

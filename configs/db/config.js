@@ -10,7 +10,8 @@ const sequelize = new Sequelize(process.env.NAME_DB, process.env.USER_DB, proces
     freezeTableName: true,
     paranoid: true
   }
-}) 
+})
+
 
 module.exports = {
     Sequelize,

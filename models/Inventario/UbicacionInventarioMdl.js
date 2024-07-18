@@ -2,7 +2,7 @@ const { df_UbicacionInventario } = require("../define")
 
 const getUbicacionInventarioMdl = async ( where = {}) => {
     try {
-       const results = await df_UbicacionInventario.findAll(where)
+       const results = await df_UbicacionInventario.findOne(where)
        return results
     } catch (error) {
         throw new Error (error.message)

@@ -19,7 +19,10 @@ const {
   createEmpleadosEmpresaCtr,
   createInventarioCtr,
   UpdateInventarioCtr,
-  uploadFileCtr
+  uploadFileCtr,
+  listsEmpleadosCtr,
+  loginAuditorCtr,
+  verifyToken
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -39,6 +42,7 @@ router.get('/getlsDisponibilidad',getLsDisponibilidadCtr)
 router.get('/getlsMarcas',getLsMarcasCtr)
 router.get('/getlsMateriales',getLsMaterialesCtr)
 router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
+router.get('/dataTable', listsEmpleadosCtr)
 
 // Post
 
@@ -46,7 +50,18 @@ router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
 router.post('/createEmpleadoEmpresa', createEmpleadosEmpresaCtr )
 router.post('/createInventario', createInventarioCtr )
 router.post('/updInventario/:id', UpdateInventarioCtr )
+router.post('/loginAuditor', loginAuditorCtr )
 
+// middleware Token. (Falta)
+router.post('/validateToken',  async (req, res) => {
+  try {
+    const { token_joro = '' } = req.headers
+    const validateToken = await verifyToken(token_joro)
+    res.send(validateToken)
+  } catch (error) {
+    res.status(401).send(error)
+  }
+})
 // Files
 router.post('/uploadFiles',uploadFileCtr)
 

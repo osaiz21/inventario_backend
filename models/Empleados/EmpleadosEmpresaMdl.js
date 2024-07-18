@@ -11,6 +11,18 @@ const createEmpleadosEmpresaMdl = async ({body}) => {
     }
 }
 
+const listEmpleadosEmpresaMdl = async (attributes = {}) => {
+    try {
+      const results = await df_EmpleadosEmpresa.findAll(
+        attributes
+      )
+      return results
+    } catch (error) {
+        throw new Error (error.message)
+    }
+}
+
 module.exports = {
-    createEmpleadosEmpresaMdl
+    createEmpleadosEmpresaMdl,
+    listEmpleadosEmpresaMdl
 }
