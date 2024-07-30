@@ -21,33 +21,29 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'placa_antigua'
     },
-    nombre_activo: {
-        type: Sequelize.TEXT,
-        field:'nombre_activo'
-    },
-    activos: {
+    activo: {
         type: Sequelize.INTEGER,
-        field:'activos'
+        field:'activo'
     },
-    material: {
+    id_material: {
         type: Sequelize.INTEGER,
-        field:'material'
+        field:'id_material'
     },
-    color: {
+    id_color: {
         type: Sequelize.INTEGER,
-        field:'color'
+        field:'id_color'
     },
     especificacion: {
         type: Sequelize.TEXT,
         field: 'especificacion'
     },
-    marca: {
+    id_marca: {
         type: Sequelize.INTEGER,
-        field: 'marca'
+        field: 'id_marca'
     },
-    modelo: {
+    id_modelo: {
         type: Sequelize.INTEGER,
-        field:'modelo'
+        field:'id_modelo'
     },
     serie: {
         type: Sequelize.TEXT,
@@ -61,13 +57,13 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'placapadre'
     },
-    estado: {
+    id_estado: {
         type: Sequelize.INTEGER,
-        field:'estado'
+        field:'id_estado'
     },
-    disponibilidad: {
+    id_disponibilidad: {
         type: Sequelize.INTEGER,
-        field:'disponibilidad'
+        field:'id_disponibilidad'
     },
     comentario: {
         type: Sequelize.TEXT,
@@ -93,9 +89,9 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'funcion_prestada'
     },
-    activo: {
+    id_activos: {
         type: Sequelize.INTEGER,
-        field:'activo'
+        field:'id_activos'
     },
     anio_adquisicion: {
         type: Sequelize.INTEGER,
@@ -120,14 +116,6 @@ const df_Inventario = sequelize.define('inventario', {
     tipo_compra: {
         type: Sequelize.INTEGER,
         field:'tipo_compra'
-    },
-    foto_2: {
-        type: Sequelize.TEXT,
-        field:'foto_2'
-    },
-    foto_3: {
-        type: Sequelize.TEXT,
-        field:'foto_3'
     }
   }
 )
