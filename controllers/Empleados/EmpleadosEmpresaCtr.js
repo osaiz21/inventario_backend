@@ -13,11 +13,18 @@ const createEmpleadosEmpresaCtr = async ( req, res ) => {
 }
 const listsEmpleadosCtr = async (req, res) => {
     try {
-        // 
-        // {
-        //     attributes: ['num_identificacion_1']
-        // }
-        const results = await listEmpleadosEmpresaMdl()
+        let params = {
+            attributes: [
+                "id",
+                "tipo_identificacion_1",
+                "num_identificacion_1",
+                "nombres_1",
+                "apellidos_1",
+                "cargo_1",
+                "cecos_1"
+            ],
+        }
+        const results = await listEmpleadosEmpresaMdl(params)
         res.send(results)
     } catch (error) {
         res.status(500).send({

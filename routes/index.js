@@ -42,7 +42,7 @@ router.get('/getlsDisponibilidad',getLsDisponibilidadCtr)
 router.get('/getlsMarcas',getLsMarcasCtr)
 router.get('/getlsMateriales',getLsMaterialesCtr)
 router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
-router.get('/dataTable', listsEmpleadosCtr)
+router.get('/getUsersCecos', listsEmpleadosCtr)
 
 // Post
 
