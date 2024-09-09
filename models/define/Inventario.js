@@ -25,6 +25,10 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.INTEGER,
         field:'activo'
     },
+    nombre_activo: {
+        type: Sequelize.TEXT,
+        field:'nombre_activo'
+    },
     id_material: {
         type: Sequelize.INTEGER,
         field:'id_material'
