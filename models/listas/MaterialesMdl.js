@@ -9,6 +9,18 @@ const getMaterialesMdl = async () => {
    }
 }
 
+const createMaterialesMdl = async (body = {}) => {
+    try {
+        const results = await df_lsMateriales.create({
+            ...body
+        })
+        return results
+    }catch (error) {
+         throw new Error (error.message)
+    }
+ }
+
 module.exports = {
-    getMaterialesMdl
+    getMaterialesMdl,
+    createMaterialesMdl
 }

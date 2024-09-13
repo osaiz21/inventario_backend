@@ -9,6 +9,18 @@ const getLsModelosMdl = async () => {
    }
 }
 
+const createLsModelosMdl = async ( body={}) => {
+    try {
+        const results = await df_lsModelos.create({
+            ...body
+        })
+        return results
+    }catch (error) {
+         throw new Error (error.message)
+    }
+ }
+
 module.exports = {
-    getLsModelosMdl
+    getLsModelosMdl,
+    createLsModelosMdl
 }

@@ -22,7 +22,14 @@ const {
   uploadFileCtr,
   listsEmpleadosCtr,
   loginAuditorCtr,
-  verifyToken
+  verifyToken,
+  createMaterialesCtr,
+  createLsActivoCtr,
+  createLsColoresCtr,
+  createLsMarcasCtr,
+  createLsModelosCtr,
+  createLsEstadoCtr,
+  createLsDisponibilidadCtr
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -52,6 +59,14 @@ router.post('/createInventario', createInventarioCtr )
 router.post('/updInventario/:id', UpdateInventarioCtr )
 router.post('/loginAuditor', loginAuditorCtr )
 
+// create listas.
+router.post('/createMateriales', createMaterialesCtr )
+router.post('/createlsActivo',createLsActivoCtr)
+router.post('/createlsColores',createLsColoresCtr)
+router.post('/createlsMarcas',createLsMarcasCtr)
+router.post('/createlsModelos',createLsModelosCtr )
+router.post('/createlsEstado',createLsEstadoCtr)
+router.post('/createlsDisponibilidad',createLsDisponibilidadCtr)
 // middleware Token. (Falta)
 router.post('/validateToken',  async (req, res) => {
   try {

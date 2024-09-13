@@ -9,6 +9,18 @@ const getColoresMdl = async () => {
    }
 }
 
+const createColoresMdl = async (body = {}) => {
+    try {
+        const results = await df_lsColores.create({
+            ...body
+        })
+        return results
+    }catch (error) {
+         throw new Error (error.message)
+    }
+ }
+
 module.exports = {
-    getColoresMdl
+    getColoresMdl,
+    createColoresMdl
 }

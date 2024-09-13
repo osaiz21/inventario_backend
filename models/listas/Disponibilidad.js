@@ -9,6 +9,18 @@ const getDisponibilidadMdl = async () => {
    }
 }
 
+const createDisponibilidadMdl = async (body = {}) => {
+    try {
+        const results = await df_lsdisponibilidad.create( {
+            ...body
+        })
+        return results
+    }catch (error) {
+         throw new Error (error.message)
+    }
+}
+
 module.exports = {
-    getDisponibilidadMdl
+    getDisponibilidadMdl,
+    createDisponibilidadMdl
 }

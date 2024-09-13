@@ -9,6 +9,18 @@ const getMarcaMdl = async () => {
    }
 }
 
+const createMarcaMdl = async (body = {}) => {
+    try {
+        const results = await df_lsMarcas.create({
+            ...body
+        })
+        return results
+    }catch (error) {
+         throw new Error (error.message)
+    }
+ }
+
 module.exports = {
-    getMarcaMdl
+    getMarcaMdl,
+    createMarcaMdl
 }

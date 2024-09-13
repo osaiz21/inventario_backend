@@ -1,4 +1,4 @@
-const { getColoresMdl } = require("../../models")
+const { getColoresMdl, createColoresMdl } = require("../../models")
 
 
 const getLsColoresCtr = async (req, res) => {
@@ -13,6 +13,19 @@ const getLsColoresCtr = async (req, res) => {
    
 }
 
+const createLsColoresCtr = async (req, res) => {
+    try {
+         const results = await createColoresMdl(req.body)
+         res.send(results)
+     } catch (error) {
+         res.status(500).send({
+             "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
+         })
+    }
+    
+}
+
 module.exports = {
-    getLsColoresCtr
+    getLsColoresCtr,
+    createLsColoresCtr
 }

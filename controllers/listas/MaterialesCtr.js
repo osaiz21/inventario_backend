@@ -1,4 +1,4 @@
-const { getMaterialesMdl } = require("../../models")
+const { getMaterialesMdl, createMaterialesMdl } = require("../../models")
 
 const getLsMaterialesCtr = async (req, res) => {
    try {
@@ -12,6 +12,18 @@ const getLsMaterialesCtr = async (req, res) => {
    
 }
 
+const createMaterialesCtr = async (req, res) => {
+    try {
+        const result = await createMaterialesMdl(req.body)
+        res.send(result)
+    } catch (error) {
+        res.send(500).send({
+            "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
+        })
+    }
+}
+
 module.exports = {
-    getLsMaterialesCtr
+    getLsMaterialesCtr,
+    createMaterialesCtr
 }

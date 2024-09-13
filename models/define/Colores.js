@@ -3,7 +3,7 @@ const { sequelize , Sequelize } = require('../../configs/db/conexion')
 const df_lsColores = sequelize.define('lista_colores', {
     text: {
         type: Sequelize.TEXT,
-        field:'color'
+        field: 'color'
     }
   }
 );
