@@ -29,7 +29,9 @@ const {
   createLsMarcasCtr,
   createLsModelosCtr,
   createLsEstadoCtr,
-  createLsDisponibilidadCtr
+  createLsDisponibilidadCtr,
+  loginPerfil,
+  ListInventarioCtrUser
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -50,6 +52,7 @@ router.get('/getlsMarcas',getLsMarcasCtr)
 router.get('/getlsMateriales',getLsMaterialesCtr)
 router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
 router.get('/getUsersCecos', listsEmpleadosCtr)
+router.get('/getListInventarioUsers', ListInventarioCtrUser )
 
 // Post
 
@@ -77,6 +80,8 @@ router.post('/validateToken',  async (req, res) => {
     res.status(401).send(error)
   }
 })
+
+router.post('/validateToken2', loginPerfil)
 // Files
 router.post('/uploadFiles',uploadFileCtr)
 

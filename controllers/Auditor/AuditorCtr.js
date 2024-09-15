@@ -18,7 +18,7 @@ const loginAuditorCtr = async (req, res) => {
       }
     })
     const token = await signGeneral(dataValues)
-    res.send(token)
+    res.send( { ...token , id : dataValues.id} )
   } catch (error) {
     res.status(500).send({
         "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
@@ -26,6 +26,29 @@ const loginAuditorCtr = async (req, res) => {
   }
 }
 
+const loginPerfil = async (req, res) => {
+  try {
+    
+    const { dataValues } = await isLoginMdl({
+      attributes: [
+        'id',
+        'nombres',
+        'apellidos',
+        'email',
+        'foto'
+      ],
+      where : {
+        id: req.body.id
+      }
+    })
+    res.send( dataValues )
+  } catch (error) {
+    res.status(500).send({
+        "mns": error.message || error.stack || 'error En encontrar Mdl ls Mantenimiento'
+    })
+  }
+}
 module.exports = {
-  loginAuditorCtr
+  loginAuditorCtr,
+  loginPerfil
 }
