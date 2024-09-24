@@ -11,7 +11,9 @@ const getUbicacionInventarioMdl = async ( where = {}) => {
 
 const createUbicacionInventarioMdl = async ({body}) => {
     try {
-
+        if(!body.codigo_plano) {
+            throw new Error(`Codigo Plano es requerido`)
+        }
         const results = await df_UbicacionInventario.create({
             ...body
         })

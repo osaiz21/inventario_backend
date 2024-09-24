@@ -38,7 +38,8 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
             i.placa_antigua,
             i.nombre_activo,
             i.serie,
-            i.createdAt
+            i.createdAt,
+            i.fotos
         from 
             inventario i left join ubicacion_inventario b on b.id = i.id_ubicacion
         where 
