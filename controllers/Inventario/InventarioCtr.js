@@ -1,4 +1,4 @@
-const { createInventarioMdl, updateInventarioMdl, ListInventarioMdl } = require("../../models")
+const { createInventarioMdl, updateInventarioMdl, ListInventarioMdl, delInventarioMdl } = require("../../models")
 
 const createInventarioCtr = async (req, res) => {
     try {
@@ -39,8 +39,27 @@ const ListInventarioCtrUser = async (req, res) => {
         })
     }
 }
+
+const delInventarioCtr = async (req, res) => {
+    try {
+        await delInventarioMdl({
+            where: {
+                id: req.params.id
+            }
+        }) 
+        res.send(
+            {
+                id: req.params.id
+            }
+        )
+    } catch (error) {
+
+    }
+}
+
 module.exports = {
     createInventarioCtr,
     UpdateInventarioCtr,
-    ListInventarioCtrUser
+    ListInventarioCtrUser,
+    delInventarioCtr
 }

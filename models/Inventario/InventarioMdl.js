@@ -42,13 +42,15 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
             i.fotos,
             i.cantidad,
             lm.marcas,
-            lmd.modelo
+            lmd.modelo,
+            'action' as action
         from 
             inventario i left join ubicacion_inventario b on b.id = i.id_ubicacion
                 left join lista_marcas lm on i.id_marca = lm.id
                 left join lista_modelo lmd on i.id_modelo = lmd.id
         where 
-            i.id_auditor  = ?`, {
+            i.id_auditor  = ? 
+            AND i.deletedAt is null `, {
             replacements: [id_auditor],
             type: QueryTypes.SELECT,
         });
@@ -57,8 +59,22 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
         throw new Error (error.message)
     }
 }
+
+const delInventarioMdl = async ( where = {}) => {
+    try {
+        const results = await df_Inventario.destroy({
+            ...where
+        })
+
+       return results
+    } catch (error) {
+        throw new Error (error.message)
+    }
+}
+
 module.exports = {
     createInventarioMdl,
     updateInventarioMdl,
-    ListInventarioMdl
+    ListInventarioMdl,
+    delInventarioMdl
 }

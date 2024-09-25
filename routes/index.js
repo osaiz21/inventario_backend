@@ -31,7 +31,8 @@ const {
   createLsEstadoCtr,
   createLsDisponibilidadCtr,
   loginPerfil,
-  ListInventarioCtrUser
+  ListInventarioCtrUser,
+  delInventarioCtr
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -84,5 +85,10 @@ router.post('/validateToken',  async (req, res) => {
 router.post('/validateToken2', loginPerfil)
 // Files
 router.post('/uploadFiles',uploadFileCtr)
+
+// Delete.
+
+router.delete('/delInventario/:id', delInventarioCtr)
+
 
 module.exports = router
