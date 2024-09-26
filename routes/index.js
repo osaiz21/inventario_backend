@@ -32,7 +32,8 @@ const {
   createLsDisponibilidadCtr,
   loginPerfil,
   ListInventarioCtrUser,
-  delInventarioCtr
+  delInventarioCtr,
+  getInventarioCtr
 } = require('../controllers')
 
 // inventarme redireccione a las db
@@ -54,6 +55,7 @@ router.get('/getlsMateriales',getLsMaterialesCtr)
 router.get('/getUbicacionInventario',getUbicacionInventarioCtr)
 router.get('/getUsersCecos', listsEmpleadosCtr)
 router.get('/getListInventarioUsers', ListInventarioCtrUser )
+router.get('/getInventario', getInventarioCtr )
 
 // Post
 

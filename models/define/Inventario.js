@@ -21,10 +21,6 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field:'placa_antigua'
     },
-    activo: {
-        type: Sequelize.INTEGER,
-        field:'activo'
-    },
     nombre_activo: {
         type: Sequelize.TEXT,
         field:'nombre_activo'

@@ -45,11 +45,13 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
             i.cantidad,
             lm.marcas,
             lmd.modelo,
+            la.activo,
             'action' as action
         from 
             inventario i left join ubicacion_inventario b on b.id = i.id_ubicacion
                 left join lista_marcas lm on i.id_marca = lm.id
                 left join lista_modelo lmd on i.id_modelo = lmd.id
+                left join lista_activos  la on i.id_activos  = la.id 
         where
             ${whereAuditor}
             i.deletedAt is null `, {
@@ -74,9 +76,21 @@ const delInventarioMdl = async ( where = {}) => {
     }
 }
 
+const getInventarioMdl = async (where = {}) => {
+    try {
+
+        const results = await df_Inventario.findOne(where)
+        console.log(results)
+        return results
+    } catch (error) {
+        
+    }
+    
+}
 module.exports = {
     createInventarioMdl,
     updateInventarioMdl,
     ListInventarioMdl,
-    delInventarioMdl
+    delInventarioMdl,
+    getInventarioMdl
 }
