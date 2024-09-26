@@ -27,6 +27,8 @@ const updateInventarioMdl = async ({body}, where = {}) => {
 
 const ListInventarioMdl = async ( {id_auditor = 0}) => {
     try {
+        console.log(id_auditor)
+        let whereAuditor = id_auditor != 0 ? `i.id_auditor  = ${id_auditor} AND ` : `` 
         const results = await sequelize.query(`SELECT
             i.id, 
             i.placa_nueva,
@@ -48,10 +50,10 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
             inventario i left join ubicacion_inventario b on b.id = i.id_ubicacion
                 left join lista_marcas lm on i.id_marca = lm.id
                 left join lista_modelo lmd on i.id_modelo = lmd.id
-        where 
-            i.id_auditor  = ? 
-            AND i.deletedAt is null `, {
-            replacements: [id_auditor],
+        where
+            ${whereAuditor}
+            i.deletedAt is null `, {
+            replacements: [],
             type: QueryTypes.SELECT,
         });
        return results

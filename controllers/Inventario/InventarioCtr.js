@@ -31,6 +31,7 @@ const UpdateInventarioCtr = async (req, res) => {
 
 const ListInventarioCtrUser = async (req, res) => {
     try {
+        
         const result = await ListInventarioMdl(req.query)
         res.send(result)
     } catch (error) {

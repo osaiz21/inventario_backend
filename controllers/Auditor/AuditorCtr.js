@@ -35,7 +35,8 @@ const loginPerfil = async (req, res) => {
         'nombres',
         'apellidos',
         'email',
-        'foto'
+        'foto',
+        'rol'
       ],
       where : {
         id: req.body.id
