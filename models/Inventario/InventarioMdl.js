@@ -25,10 +25,11 @@ const updateInventarioMdl = async ({body}, where = {}) => {
 }
 
 
-const ListInventarioMdl = async ( {id_auditor = 0}) => {
+const ListInventarioMdl = async ( {id_auditor = 0, createdAt}) => {
     try {
         console.log(id_auditor)
-        let whereAuditor = id_auditor != 0 ? `i.id_auditor  = ${id_auditor} AND ` : `` 
+        let whereAuditor = id_auditor != 0 ? `i.id_auditor  = ${id_auditor} AND ` : ``
+        let wherecreatedAt = !!createdAt ? `date(i.createdAt) = '${createdAt}' AND` : null
         const results = await sequelize.query(`SELECT
             i.id, 
             i.placa_nueva,
@@ -54,6 +55,7 @@ const ListInventarioMdl = async ( {id_auditor = 0}) => {
                 left join lista_activos  la on i.id_activos  = la.id 
         where
             ${whereAuditor}
+            ${wherecreatedAt}
             i.deletedAt is null `, {
             replacements: [],
             type: QueryTypes.SELECT,
@@ -80,7 +82,6 @@ const getInventarioMdl = async (where = {}) => {
     try {
 
         const results = await df_Inventario.findOne(where)
-        console.log(results)
         return results
     } catch (error) {
         
