@@ -16,7 +16,7 @@ const updateInventarioMdl = async ({body}, where = {}) => {
     try {
         const results = await df_Inventario.update(
             body,
-            where,
+            where
         )
        return results
     } catch (error) {

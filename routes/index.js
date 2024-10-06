@@ -62,7 +62,7 @@ router.get('/getInventario', getInventarioCtr )
 router.post('/createUbicacionInventario',createUbicacionInventarioCtr)
 router.post('/createEmpleadoEmpresa', createEmpleadosEmpresaCtr )
 router.post('/createInventario', createInventarioCtr )
-router.post('/updInventario/:id', UpdateInventarioCtr )
+router.put('/updInventario/:id', UpdateInventarioCtr )
 router.post('/loginAuditor', loginAuditorCtr )
 
 // create listas.
