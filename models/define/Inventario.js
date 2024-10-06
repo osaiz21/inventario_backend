@@ -37,6 +37,11 @@ const df_Inventario = sequelize.define('inventario', {
         type: Sequelize.TEXT,
         field: 'especificacion'
     },
+
+    id_activos: {
+        type: Sequelize.INTEGER,
+        field:'id_activos'
+    },
     id_marca: {
         type: Sequelize.INTEGER,
         field: 'id_marca'
@@ -88,10 +93,6 @@ const df_Inventario = sequelize.define('inventario', {
     funcion_prestada: {
         type: Sequelize.TEXT,
         field:'funcion_prestada'
-    },
-    id_activos: {
-        type: Sequelize.INTEGER,
-        field:'id_activos'
     },
     anio_adquisicion: {
         type: Sequelize.INTEGER,
